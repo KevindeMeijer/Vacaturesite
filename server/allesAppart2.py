@@ -1,6 +1,12 @@
 import requests
 import json
 import mysql.connector
+import re
+
+def cleanhtml(raw_html):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', raw_html)
+  return cleantext
 
 def getrequest(url):
 
@@ -15,8 +21,8 @@ r_po = product_owner['results']
 connection = mysql.connector.connect(host='localhost', user='root', passwd='titatovenaar', db='test')
 
 for beschrijving in r_po:
-
-    val = ('product owner', str(beschrijving))
+    clean_desctiption = cleanhtml(str(beschrijving['description']))
+    val = ('product owner', clean_desctiption)
     query = 'INSERT INTO data (catagorie, info) VALUES (%s, %s);'
 
     mycursor = connection.cursor()
