@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans&display=swap');
 
 :root {
     /* Backgrounds & text */
@@ -53,11 +53,11 @@
 }
 
 body {
-
+    
 }
 
 .title {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     text-align: center;
 }
