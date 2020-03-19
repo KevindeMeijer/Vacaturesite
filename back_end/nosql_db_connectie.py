@@ -11,10 +11,14 @@ mydb = myclient[dbname]
 print(mydb)
 
 #lijst van de collections
-for coll in mydb.list_collection_names():
-    print(coll)
+# for coll in mydb.list_collection_names():
+#     print(coll)
 
 
 # Krijgen van alle vacatures in de database
 for post in mydb.Vacatures.find():
     pprint.pprint(post)
+
+een_vacature = mydb.Vacatures.find_one()
+goed = een_vacature["id"]
+print(een_vacature["id"])
