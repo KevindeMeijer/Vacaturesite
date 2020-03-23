@@ -11,7 +11,7 @@ CORS(app)
 def index():
     return render_template("index.html")
 
-@app.route('/<path:path>')
+@app.route('/html/<path:path>')
 def send_static(path):
     return send_from_directory('static', path)
 
