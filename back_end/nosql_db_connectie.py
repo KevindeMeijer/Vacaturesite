@@ -14,14 +14,23 @@ print(mydb)
 # for coll in mydb.list_collection_names():
 #     print(coll)
 
-
+vacatures = []
 # Krijgen van alle vacatures in de database
-# for post in mydb.Vacatures.find():
-#     pprint.pprint(post)
+for post in mydb.Vacatures.find():
+    vacatures.append(post)
 
-# for description in mydb.Vacatures.find():
+vacature_title = []
+vacature_description = []
 
 
 een_vacature = mydb.Vacatures.find_one()
 goed = een_vacature["id"]
 print(een_vacature["id"])
+
+
+for titel in mydb.Vacatures.find():
+    vacature_title.append(titel['title'])
+
+for beschrijving in mydb.Vacatures.find():
+    vacature_description.append(beschrijving['description'])
+
