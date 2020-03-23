@@ -16,8 +16,8 @@ print(mydb)
 
 
 # Krijgen van alle vacatures in de database
-for post in mydb.Vacatures.find():
-    pprint.pprint(post)
+# for post in mydb.Vacatures.find():
+#     pprint.pprint(post)
 
 # for description in mydb.Vacatures.find():
 

@@ -26,6 +26,9 @@ def send_css(path):
 
 
 # api bezig
+# @app.route("/")
+# def 
+
 @app.route("/ingevoerd", methods=['GET'])
 def ingevoerd():
     return jsonify(goed), 200, {'ContentType': 'application/json'}
