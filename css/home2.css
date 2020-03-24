@@ -95,7 +95,7 @@ header {
     cursor: pointer;
 }
  
-@media screen and (max-width:749px) {
+@media screen and (max-width:900px) {
     .menu-toggle-btn {
       display: block !important;
     }
@@ -103,7 +103,7 @@ header {
     .navigation-menu {
       position: fixed;
       width: 100%;
-      max-width: 400px;
+      /* max-width: 400px; */
       background: #172b4d;
       top: 90px;
       right: 0;
