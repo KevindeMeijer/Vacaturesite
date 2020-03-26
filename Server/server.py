@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
 # from flask_cors import CORS
 
-from nosql_db_connectie import goed
+import sys
+sys.path.append("..")
+
 
 app = Flask(__name__)
 # CORS(app)
@@ -28,13 +30,9 @@ def send_img(path):
     return send_from_directory('img', path)
 
 
-# api bezig
-# @app.route("/")
-# def 
-
-@app.route("/ingevoerd", methods=['GET'])
-def ingevoerd():
-    return jsonify(goed), 200, {'ContentType': 'application/json'}
+# @app.route("/ingevoerd", methods=['GET'])
+# def ingevoerd():
+#     return jsonify(goed), 200, {'ContentType': 'application/json'}
 
 
 
