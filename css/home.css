@@ -1,24 +1,27 @@
 * {
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 	font-family: "montserrat",sans-serif;
+}
+
+p {
+	padding: 0 10%;
 }
 
 .header {
 	height: 100px;
-	background: #34495e;
-	padding: 0 20px;
+	background: #00A1E1;
+	padding: 0 10%;
 	color: #fff;
 }
+
 .logo {
 	line-height: 100px;
 	float: left;
 	max-height: 50px;
 	width: auto;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding: 25px 10px;
 }
 
 .menu {
@@ -52,7 +55,7 @@
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
-  	color: #3498db;
+  	color: #000;
 }
 
 #chk {
@@ -62,7 +65,7 @@
 }
 
 .content {
-  	padding: 0 20px;
+  	/* padding: 0 20px; */
 }
 
 .content img {
@@ -104,8 +107,17 @@
     	top: 40px;
     	right: 40px;
 	}
+
+	.header {
+		padding: 0 20px;
+	}
+
+	p {
+		padding: 0 20px;
+	}
 	  
   	#chk:checked ~ .menu {
-    	right: 0;
-  	}
+		right: 0;
+	}
+	  
 }
