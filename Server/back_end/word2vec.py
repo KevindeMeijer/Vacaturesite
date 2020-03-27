@@ -13,3 +13,5 @@ model = gensim.models.Word2Vec(divided_sentense_vacature_list, size=120, window=
 
 w1 = ["frontend"]
 output = model.wv.most_similar(positive=w1, topn=5)
+
+goede = ' '.join(map(str, output))

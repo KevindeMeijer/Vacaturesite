@@ -32,8 +32,8 @@ def send_img(path):
 
 @app.route("/ingevoerd", methods=['GET'])
 def ingevoerd():
-    return jsonify(word2vec.output), 200, {'ContentType': 'application/json'}
+    return jsonify(word2vec.goede), 200, {'ContentType': 'application/json'}
 
 
 
-app.run()
+app.run(debug=True)
