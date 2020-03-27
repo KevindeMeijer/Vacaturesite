@@ -52,14 +52,12 @@
     padding: 0;
 }
 
-body {
-    
-}
-
 .title {
+    padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 p {
