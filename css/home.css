@@ -5,8 +5,12 @@
 	font-family: "montserrat",sans-serif;
 }
 
-p {
-	padding: 0 10%;
+p, table {
+	padding: 10px 10%;
+}
+
+li {
+	text-align: center;
 }
 
 .header {
@@ -120,4 +124,40 @@ p {
 		right: 0;
 	}
 	  
+}
+
+/* TABLE STYLING */
+table {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid var(--500);
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid var(--500);
+    border-bottom: 1px solid var(--500);
+    color: var(--900);
+}
+
+tr {
+    background-color: var(--200);
+}
+
+.tablehead {
+    background-color: var(--400);
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--300);
+}
+
+.roles {
+    overflow-x: auto;
 }
