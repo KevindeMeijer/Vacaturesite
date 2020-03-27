@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
 # from flask_cors import CORS
 
-import sys
-sys.path.append("..")
+
+from back_end import word2vec
 
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 # webserver
 @app.route("/")
 def index():
-    return send_from_directory('html', 'home2.html')
+    return send_from_directory('html', 'home.html')
 
 @app.route('/<path:path>')
 def send_html(path):
@@ -30,9 +30,9 @@ def send_img(path):
     return send_from_directory('img', path)
 
 
-# @app.route("/ingevoerd", methods=['GET'])
-# def ingevoerd():
-#     return jsonify(goed), 200, {'ContentType': 'application/json'}
+@app.route("/ingevoerd", methods=['GET'])
+def ingevoerd():
+    return jsonify(word2vec.output), 200, {'ContentType': 'application/json'}
 
 
 
