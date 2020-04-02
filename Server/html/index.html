@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="utf-8">
+	<title>E.I. | Home</title>
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Icon library -->
-	<script src="https://kit.fontawesome.com/202330189a.js" crossorigin="anonymous"></script>
-	<!-- .css links -->
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <!-- Tab text & Icon -->
-    <link rel="icon" href="/icon/home.png">
-    <title>E.I. - Home</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 </head>
 
 <body>
-    <h1 class="title">Welkom op Employment Insights</h1>
-    <div class="container">
+	<header>
+	<div class="header">
+		<a href="../html/index.html"><img src="../img/logo_tight.png" alt="Employment Insights" class="logo"></a>
 
-        <table id="uwu" class="roles">
+		<input type="checkbox" id="chk">
+		<label for="chk" class="show-menu-btn">
+			<i class="fas fa-ellipsis-h"></i>
+		</label>
+
+		<ul class="menu">
+			<a href="../html/favourites.html">Favorieten</a>
+			<a href="../html/dashboard.html">Dashboard</a>
+			<a href="../html/settings.html">Settings</a>
+			<a href="../html/contact.html">Contact</a>
+
+			<label for="chk" class="hide-menu-btn">
+				<i class="fas fa-times"></i>
+			</label>
+			
+		</ul>
+	</div>
+	</header>
+
+
+	<div class="content">
+		<center>
+			<img src="#" alt="">
+		</center>
+		
+		
+		<section>
+			<p>
+				Hieronder zijn onze resultaten uit een word2vec te vinden. De tabel toont gegevens die uit een database zijn gehaald. 
+				De lijst onder deze tabel toont de overeenkomst van woorden met Front-end via een word2vec.</p>
+		</section>
+
+		<section>
+		<table id="uwu" class="roles">
             <thead>
             <tr class="tablehead">
                 <th>ID</th>
@@ -47,8 +76,19 @@
                 <td>Als product owner ben je eigenlijk niet bezig...</td>
             </tr>
         </table>
-    </div>
+		</section>
 
+		<section>
+			<h1 class="title">Front-end</h1>
+			<ul>
+				<li id="Word2VecRes1">Overeenkomst 1</li>
+				<li id="Word2VecRes2">Overeenkomst 2</li>
+				<li id="Word2VecRes3">Overeenkomst 3</li>
+				<li id="Word2VecRes4">Overeenkomst 4</li>
+				<li id="Word2VecRes5">Overeenkomst 5</li>
+		</section>
+
+	</div>
 </body>
 
 </html>

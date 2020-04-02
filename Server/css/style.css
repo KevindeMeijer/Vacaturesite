@@ -1,36 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Open+Sans&display=swap');
 
+/* CSS Variables */
+
 :root {
     /* Backgrounds & text */
-    --100: #EAECEE;
-    --200: #CACFD3;
-    --300: #ABB2B9;
-    --400: #6B7885;
-    --500: #2C3E50;
-    --600: #283848;
-    --700: #1A2530;
-    --800: #141C24;
-    --900: #0D1318;
+    --010: #EAECEE;
+    --020: #CACFD3;
+    --030: #ABB2B9;
+    --040: #6B7885;
+    --050: #2C3E50;
+    --060: #283848;
+    --070: #1A2530;
+    --080: #141C24;
+    --090: #0D1318;
     /* HU RED */
-    --101: #FDEAEA;
-    --201: #F9CBCA;
-    --301: #F5ACAA;
-    --401: #EE6E6B;
-    --501: #E6302B;
-    --601: #CF2B27;
-    --701: #8A1D1A;
-    --801: #681613;
-    --901: #450E0D;
+    --R01: #FDEAEA;
+    --R02: #F9CBCA;
+    --R03: #F5ACAA;
+    --R04: #EE6E6B;
+    --R05: #E6302B;
+    --R06: #CF2B27;
+    --R07: #8A1D1A;
+    --R08: #681613;
+    --R09: #450E0D;
     /* HU BLUE */
-    --102: #E6F6FC;
-    --202: #BFE8F8;
-    --302: #99D9F3;
-    --402: #4DBDEA;
-    --502: #00A1E1;
-    --602: #0091CB;
-    --702: #006187;
-    --802: #004865;
-    --902: #003044;
+    --B01: #E6F6FC;
+    --B02: #BFE8F8;
+    --B03: #99D9F3;
+    --B04: #4DBDEA;
+    --B05: #00A1E1;
+    --B06: #0091CB;
+    --B07: #006187;
+    --B08: #004865;
+    --B09: #003044;
     /* Accent Hues */
     --0: #FFFFFF;
     --1: #1abc9c;
@@ -46,10 +48,13 @@
     --111: #FFFFFF;
 }
 
+/* GENERAL STYLING */
 
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    font-family: "montserrat",sans-serif;
 }
 
 .title {
@@ -64,4 +69,121 @@ p {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     text-align: justify;
+    padding: 10px 10%;
+}
+
+/* NAVBAR STYLING */
+
+.header {
+    height: 100px;
+    background: var(--B05);
+    padding: 0 10%;
+    color: var(--111);
+}
+
+.logo {
+    line-height: 100px;
+    float: left;
+    height: 50px;
+    width: auto;
+    padding: 25px 10px;
+    box-sizing: content-box;
+}
+
+.menu {
+    float: right;
+    line-height: 100px;
+}
+
+.menu a {
+    color: var(--111);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.show-menu-btn,.hide-menu-btn {
+    transition: 0.4s;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 100px;
+}
+
+.menu a:hover,
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+    color:var(--090);
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+.content {
+    /* padding: 0 20px; */
+}
+
+.content img {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px 0;
+}
+
+.content p {
+    text-align: justify;
+}
+
+@media screen and (max-width:850px) {
+
+    .show-menu-btn,.hide-menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--B08);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0;
+        line-height: normal;
+        transition: 0.7s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .header {
+        padding: 0 20px;
+    }
+
+    p {
+        padding: 0 20px;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+
 }
