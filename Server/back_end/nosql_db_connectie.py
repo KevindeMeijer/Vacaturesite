@@ -10,6 +10,7 @@ import nltk as nltk
 from nltk.tokenize import word_tokenize
 
 
+
 #Dit is de databaselink
 myclient = pymongo.MongoClient("mongodb+srv://JacobKrmn:root@employmentinsights-edrz0.gcp.mongodb.net/test?retryWrites=true&w=majority")
 dbname = "EmploymentInsights"

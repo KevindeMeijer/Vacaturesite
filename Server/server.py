@@ -29,7 +29,7 @@ def send_css(path):
 def send_img(path):
     return send_from_directory('img', path)
 
-
+#API Routes
 @app.route("/ingevoerd", methods=['GET'])
 def ingevoerd():
     return jsonify(word2vec.goede), 200, {'ContentType': 'application/json'}
