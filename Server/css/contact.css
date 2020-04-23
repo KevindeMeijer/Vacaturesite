@@ -6,23 +6,27 @@
 input[type=text], input[type=tel], input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--030);
+    border: 2px solid var(--020);
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    background-color: var(--B01);
+    background-color: var(--111);
 }
 
 input[type=submit] {
-    background-color: var(--2);
-    color: white;
+    background-color: var(--B50);
+    color: var(--111);
     padding: 12px 20px;
     border: none;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: var(--B05);
+    background-color: var(--1100);
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea:focus {
+    border: 2px solid var(--B50);
 }
 
 /* Style the container/contact section */

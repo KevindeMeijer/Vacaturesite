@@ -3,6 +3,9 @@
 /* CSS Variables */
 
 :root {
+    /* Black & White */
+    --000: #000000;
+    --111: #FFFFFF;
     /* Backgrounds & text */
     --010: #EAECEE;
     --020: #CACFD3;
@@ -14,38 +17,42 @@
     --080: #141C24;
     --090: #0D1318;
     /* HU RED */
-    --R01: #FDEAEA;
-    --R02: #F9CBCA;
-    --R03: #F5ACAA;
-    --R04: #EE6E6B;
-    --R05: #E6302B;
-    --R06: #CF2B27;
-    --R07: #8A1D1A;
-    --R08: #681613;
-    --R09: #450E0D;
+    --R10: #FDEAEA;
+    --R20: #F9CBCA;
+    --R30: #F5ACAA;
+    --R40: #EE6E6B;
+    --R50: #E6302B;
+    --R60: #CF2B27;
+    --R70: #8A1D1A;
+    --R80: #681613;
+    --R90: #450E0D;
     /* HU BLUE */
-    --B01: #E6F6FC;
-    --B02: #BFE8F8;
-    --B03: #99D9F3;
-    --B04: #4DBDEA;
-    --B05: #00A1E1;
-    --B06: #0091CB;
-    --B07: #006187;
-    --B08: #004865;
-    --B09: #003044;
-    /* Accent Hues */
-    --0: #FFFFFF;
-    --1: #1abc9c;
-    --2: #2ecc71;
-    --3: #3498db;
-    --4: #9b59b6;
-    --5: #f1c40f;
-    --6: #e67e22;
-    --7: #e74c3c;
-    --8: #c0392b;
-    /* Black & White */
-    --000: #000000;
-    --111: #FFFFFF;
+    --B10: #E6F6FC;
+    --B20: #BFE8F8;
+    --B30: #99D9F3;
+    --B40: #4DBDEA;
+    --B50: #00A1E1;
+    --B60: #0091CB;
+    --B70: #006187;
+    --B80: #004865;
+    --B90: #003044;
+    /* Material Design - Accent Hues */
+    --110: #ff1744;
+    --120: #F50057;
+    --130: #D500F9;
+    --140: #651FFF;
+    --150: #3D5AFE;
+    --160: #2979FF;
+    --170: #00B0FF;
+    --180: #00E5FF;
+    --190: #1DE9B6;
+    --1100: #00E676;
+    --1110: #76FF03;
+    --1120: #C6FF00;
+    --1130: #FFEA00;
+    --1140: #FFC400;
+    --1150: #FF9100;
+    --1160: #FF3D00;
 }
 
 /* GENERAL STYLING */
@@ -72,11 +79,15 @@ p {
     padding: 10px 10%;
 }
 
+body {
+    background-color: var(--010);
+}
+
 /* NAVBAR STYLING */
 
 .header {
     height: 100px;
-    background: var(--B05);
+    background: var(--B50);
     padding: 0 10%;
     color: var(--111);
 }
@@ -121,7 +132,7 @@ p {
 .menu a:hover,
 .show-menu-btn:hover,
 .hide-menu-btn:hover {
-    color:var(--090);
+    color:var(--000);
 }
 
 #chk {
@@ -154,7 +165,7 @@ p {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: var(--B08);
+        background: var(--B80);
         right: -100%;
         top: 0;
         text-align: center;

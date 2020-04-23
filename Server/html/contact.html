@@ -13,7 +13,7 @@
 <body>
     <header>
         <div class="header">
-            <a href="../html/index.html"><img src="../img/logo_tight.png" alt="Employment Insights" class="logo"></a>
+            <a href="../html/index.html"><img src="../img/logo/logo_tight.png" alt="Employment Insights" class="logo"></a>
 
             <input type="checkbox" id="chk">
             <label for="chk" class="show-menu-btn">
@@ -23,7 +23,7 @@
             <ul class="menu">
                 <a href="../html/favourites.html">Favorieten</a>
                 <a href="../html/dashboard.html">Dashboard</a>
-                <a href="../html/settings.html">Settings</a>
+                <a href="../html/team.html">Ons Team</a>
                 <a href="../html/contact.html">Contact</a>
 
                 <label for="chk" class="hide-menu-btn">
@@ -45,21 +45,21 @@
             <div class="column">
                 <form action="../html/confirmation.html">
                     <label for="fname">Naam</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Stijn de Kaper" required>
+                    <input type="text" id="fname" name="firstname" value="Stijn de Kaper" required minlength="3" >
                     <label for="tel">Telefoonnummer</label>
-                    <input type="tel" id="tel" name="tel" placeholder="0699227755">
+                    <input type="tel" id="tel" name="tel" value="0699227755" required>
                     <label for="email">E-mailadres</label>
-                    <input type="email" id="email" name="email" placeholder="stijn.dekaper@outlook.com">
-                    <label for="country">Onderwerp</label>
-                    <select id="country" name="country">
+                    <input type="email" id="email" name="email" value="stijn.dekaper@outlook.com">
+                    <label for="subject">Onderwerp</label>
+                    <select id="subject" name="subject">
                         <option value="bug">Bug</option>
                         <option value="problem">Probleem</option>
                         <option value="suggest">Suggestie</option>
                         <option value="other">Anders</option>
                     </select>
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-                    <input type="submit" value="Submit" required>
+                    <label for="message">Uw bericht</label>
+                    <textarea id="message" name="message" placeholder="Begin hier met typen..." style="height:170px" required></textarea>
+                    <input type="submit" value="Submit">
                 </form>
             </div>
         </div>
