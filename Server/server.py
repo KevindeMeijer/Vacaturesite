@@ -11,7 +11,7 @@ app = Flask(__name__)
 # webserver
 @app.route("/")
 def index():
-    return send_from_directory('html', 'home.html')
+    return send_from_directory('html', 'index.html')
 
 @app.route('/<path:path>')
 def send_html(path):
@@ -25,7 +25,7 @@ def send_js(path):
 def send_css(path):
     return send_from_directory('css', path)
 
-@app.route('/img/<path:path>')
+@app.route('/img/team/<path:path>')
 def send_img(path):
     return send_from_directory('img', path)
 
