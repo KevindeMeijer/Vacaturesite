@@ -13,21 +13,21 @@ app = Flask(__name__)
 def index():
     return send_from_directory('html', 'index.html')
 
-@app.route('/<path:path>')
-def send_html(path):
-    return send_from_directory('html', path)
+@app.route('/html/<path:filename>')
+def send_html(filename):
+    return send_from_directory('html', filename)
 
-@app.route('/js/<path:path>')
-def send_js(path):
-    return send_from_directory('js', path)
+@app.route('/js/<path:filename>')
+def send_js(filename):
+    return send_from_directory('js', filename)
 
-@app.route('/css/<path:path>')
-def send_css(path):
-    return send_from_directory('css', path)
+@app.route('/css/<path:filename>')
+def send_css(filename):
+    return send_from_directory('css', filename)
 
-@app.route('/img/<path:path>')
-def send_img(path):
-    return send_from_directory('img', path)
+@app.route('/img/<path:filename>')
+def send_img(filename):
+    return send_from_directory('img', filename)
 
 #API Routes
 @app.route("/ingevoerd", methods=['GET'])

@@ -3,13 +3,10 @@ import pprint
 import json
 import string
 import re
-from string import digits
 import gensim
 from gensim.parsing.preprocessing import remove_stopwords, STOPWORDS
 import nltk as nltk
 from nltk.tokenize import word_tokenize
-
-
 
 #Dit is de databaselink
 myclient = pymongo.MongoClient("mongodb+srv://JacobKrmn:root@employmentinsights-edrz0.gcp.mongodb.net/test?retryWrites=true&w=majority")
@@ -21,7 +18,7 @@ print(mydb)
 
 #De functie om alle punctuations er uit te halen.
 remove_punctuations = str.maketrans('', '', string.punctuation)
-remove_digits = str.maketrans('', '', digits)
+remove_digits = str.maketrans('', '', string.digits)
 all_stopwords = gensim.parsing.preprocessing.STOPWORDS
 
 
