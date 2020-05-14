@@ -7,6 +7,8 @@ import gensim
 from gensim.parsing.preprocessing import remove_stopwords, STOPWORDS
 import nltk as nltk
 from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer 
+from part_of_speech import get_part_of_speech
 
 #Dit is de databaselink
 myclient = pymongo.MongoClient("mongodb+srv://JacobKrmn:root@employmentinsights-edrz0.gcp.mongodb.net/test?retryWrites=true&w=majority")
@@ -20,6 +22,7 @@ print(mydb)
 remove_punctuations = str.maketrans('', '', string.punctuation)
 remove_digits = str.maketrans('', '', string.digits)
 all_stopwords = gensim.parsing.preprocessing.STOPWORDS
+lemmatizer = WordNetLemmatizer()
 
 
 vacature_description = []
@@ -37,4 +40,8 @@ for description in mydb.Vacatures.find():
 #Het zeten vna elke sentence in een list
 for divided_sentence in vacature_description:
     divided = divided_sentence.split()
-    divided_sentense_vacature_list.append(divided)
+    new_divided = []
+    for he in divided:
+        new_he = lemmatizer.lemmatize(he, get_part_of_speech(he))
+        new_divided.append(new_he)
+    divided_sentense_vacature_list.append(new_divided)

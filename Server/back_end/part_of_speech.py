@@ -12,6 +12,7 @@ def get_part_of_speech(word):
     pos_counts["a"] = len( [ item for item in probable_part_of_speech if item.pos()=="a"] )
     pos_counts["r"] = len( [ item for item in probable_part_of_speech if item.pos()=="r"] )
     pos_counts["e"] = len( [ item for item in probable_part_of_speech if item.pos()=="e"] )
-    
+
     most_likely_part_of_speech = pos_counts.most_common(1)[0][0]
     return most_likely_part_of_speech
+
