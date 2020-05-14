@@ -3,10 +3,10 @@ import logging
 import os
 from gensim.models import Word2Vec
 
-from sklearn.decomposition import PCA
-from matplotlib import pyplot
+# from sklearn.decomposition import PCA
+# from matplotlib import pyplot
 
-from nosql_db_connectie import divided_sentense_vacature_list
+from back_end.nosql_db_connectie import divided_sentense_vacature_list
 
 logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s, level=logging.INFO")
 

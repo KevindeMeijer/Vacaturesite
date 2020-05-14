@@ -8,7 +8,7 @@ from gensim.parsing.preprocessing import remove_stopwords, STOPWORDS
 import nltk as nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer 
-from part_of_speech import get_part_of_speech
+from back_end.part_of_speech import get_part_of_speech
 
 #Dit is de databaselink
 myclient = pymongo.MongoClient("mongodb+srv://JacobKrmn:root@employmentinsights-edrz0.gcp.mongodb.net/test?retryWrites=true&w=majority")
@@ -41,7 +41,7 @@ for description in mydb.Vacatures.find():
 for divided_sentence in vacature_description:
     divided = divided_sentence.split()
     new_divided = []
-    for he in divided:
-        new_he = lemmatizer.lemmatize(he, get_part_of_speech(he))
-        new_divided.append(new_he)
+    for divided_word in divided:
+        lemmatized_words = lemmatizer.lemmatize(divided_word, get_part_of_speech(divided_word))
+        new_divided.append(lemmatized_words)
     divided_sentense_vacature_list.append(new_divided)
