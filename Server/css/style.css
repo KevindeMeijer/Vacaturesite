@@ -61,13 +61,16 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: "montserrat",sans-serif;
+    font-family: "Montserrat",sans-serif;
 }
 
-.title {
+.section-title {
     padding: 10px 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 42px;
+    color: var(--000);
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 8px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -153,6 +156,13 @@ body {
 
 .content p {
     text-align: justify;
+}
+
+.border {
+    width: 160px;
+    height: 2px;
+    background: var(--R50);
+    margin: 40px auto;
 }
 
 @media screen and (max-width:850px) {
