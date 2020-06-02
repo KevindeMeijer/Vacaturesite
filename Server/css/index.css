@@ -16,20 +16,6 @@
     overflow: hidden;
 }
 
-.section-title {
-    text-align: center;
-    color: var(--090);
-    text-transform: uppercase;
-    font-size: 30px;
-}
-
-.border {
-    width: 160px;
-    height: 2px;
-    background: var(--R50);
-    margin: 40px auto;
-}
-
 .services-container {
     display: flex;
     flex-wrap: wrap;
@@ -73,8 +59,8 @@
 }
 
 .service-box:hover .service-icon {
-    background: var(--B70);
-    color: var(--111)
+    background: var(--B50);
+    color: var(--B10)
 }
 
 .service-title {
