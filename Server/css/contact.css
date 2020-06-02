@@ -58,6 +58,6 @@ input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, textarea
     }
 
     .container {
-        padding: 10px 5%;
+        padding: 40px 5%;
     }
 }

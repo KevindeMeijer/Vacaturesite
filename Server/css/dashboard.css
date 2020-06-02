@@ -28,10 +28,6 @@ body {
     border: 2px solid var(--000);
 }
 
-.wrap {
-    padding: 40px 0;
-}
-
 @media screen and (max-width:960px) {
     .container {
         width: 100%;

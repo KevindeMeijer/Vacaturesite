@@ -165,6 +165,10 @@ body {
     margin: 40px auto;
 }
 
+.wrap {
+    padding: 40px 10%;
+}
+
 @media screen and (max-width:960px) {
 
     .show-menu-btn,.hide-menu-btn {
@@ -206,6 +210,10 @@ body {
 
     #chk:checked ~ .menu {
         right: 0;
+    }
+
+    .wrap {
+        padding: 40px 20px;
     }
 
 }
