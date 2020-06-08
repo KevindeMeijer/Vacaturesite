@@ -8,19 +8,15 @@ config = {
   'raise_on_warnings': True
 }
 
-cnx = mysql.connector.connect(**config)
+def execute_sql(sql):
+    cnx = mysql.connector.connect(**config)
+    try:
+        cursor = cnx.cursor()
+        cursor.execute(sql)
+        cnx.commit()
+    except:
+        return "Error inserting into db"
+    finally:
+        cnx.close()
+    return None
 
-
-
-cursor = cnx.cursor()
-
-test = ("INSERT INTO reports "
-        "(telefoonnummer, email_adres, onderwerp, bericht) "
-        "VALUES (%s, %s, %s, %s)")
-data = ('0612345678', 'iets@hotmail.com', 'bug', 'Het werkt niet.')  
-
-cursor.execute(test, data)
-
-cnx.commit()
-cursor.close()
-cnx.close()

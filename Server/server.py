@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, redirect, render_template, send_from_
 
 
 from back_end import word2vec
-
+from back_end.sql_db_connectie import execute_sql
 
 app = Flask(__name__)
 # CORS(app)
@@ -34,6 +34,12 @@ def send_img(filename):
 def ingevoerd():
     return jsonify(word2vec.goede), 200, {'ContentType': 'application/json'}
 
-
-
+@app.route("/report", methods=['POST'])
+def report():
+    gegevens = request.json 
+    res = execute_sql("INSERT INTO reportss(naam, telefoonnummer, email_adres, onderwerp, bericht) VALUES ('{}', '{}', '{}', '{}', '{}')".format(gegevens['naam'], gegevens['telefoonnummer'], gegevens['email_adres'], gegevens['onderwerp'], gegevens['bericht']))
+    if res is None:
+        return jsonify({'success': True}), 200, {'ContentType': 'application/json'}
+    else:
+        return jsonify({'success': False}), 400, {'ContentType': 'application/json'}
 app.run(debug=False)

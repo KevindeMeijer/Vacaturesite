@@ -26,3 +26,20 @@ function ingevoerd() {
           Word2VecRes5.innerHTML = result5;
     });
 }
+function report() {
+    let naam = document.getElementById('fname').value;
+    let telefoonnummer = document.getElementById('tel').value;
+    let email_adres = document.getElementById('email').value;
+    let onderwerp = document.getElementById('subject').value;
+    let bericht = document.getElementById('message').value;
+
+    let jsondata = { 'naam': naam, 'telefoonnummer': telefoonnummer, 'email_adres': email_adres, 'onderwerp': onderwerp, 'bericht': bericht};
+    fetch('http://127.0.0.1:5000/report', {
+        method: 'POST',
+        headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+        body: JSON.stringify(jsondata)
+    }).then((response) => {
+        return response.json();
+    });
+    return false;
+};
