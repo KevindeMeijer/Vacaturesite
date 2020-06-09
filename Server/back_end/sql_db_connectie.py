@@ -24,7 +24,7 @@ def execute_sql(sql):
 def load_sql(question):
     cnx = mysql.connector.connect(**config)
     try:
-        cursor = cnx.cursor()
+        cursor = cnx.cursor(dictionary=True)
         cursor.execute(question)
         result = cursor.fetchall()
         return result

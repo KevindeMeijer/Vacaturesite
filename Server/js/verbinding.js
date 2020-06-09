@@ -44,30 +44,36 @@ function report() {
 }
 
 function load_reports() {
-  console.info('%cFetching request', 'color:lime;font-weight:bold;')
-  let naam_1 = document.getElementById('naam_1');
-  let telefoonnummer_1 = document.getElementById('telefoonnummer_1');
-  let mail_1 = document.getElementById('mail_1');
-  let onderwerp_1 = document.getElementById('onderwerp_1');
-  let bericht_1 = document.getElementById('bericht_1');
-
   fetch('http://127.0.0.1:5000/load_reports')
     .then(response => response.json())
     .then(result => {
-      console.log(result)
-      result = result.split(") (");
-      result_id_contact = result[0];
-      result_naam = result[1];
-      result_telefoonnummer = result[2];
-      result_mail = result[3];
-      result_onderwerp = result[4];
-      result_bericht = result[5];
+      let table_1 = document.getElementById('admintable')
+      for (var i = 0; i < result.length; ++i) {
+        item = result[i]
+        let new_row = table_1.insertRow(-1);
+        
+        let new_naam = new_row.insertCell(0);
+        let new_text_naam = document.createTextNode(item.naam);
+        new_naam.appendChild(new_text_naam);
 
-      naam_1.innerHTML = result_naam;
-      telefoonnummer_1.innerHTML = result_telefoonnummer;
-      mail_1.innerHTML = result_mail;
-      onderwerp_1.innerHTML = result_onderwerp;
-      bericht_1.innerHTML = result_bericht;
+        let new_telefoonnummer = new_row.insertCell(1);
+        let new_text_telefoonnummer = document.createTextNode(item.telefoonnummer);
+        new_telefoonnummer.appendChild(new_text_telefoonnummer);
+        
+        let new_email = new_row.insertCell(2);
+        let new_text_email = document.createTextNode(item.email_adres);
+        new_email.appendChild(new_text_email);
+
+        let new_onderwerp = new_row.insertCell(3);
+        let new_text_onderwerp = document.createTextNode(item.onderwerp);
+        new_onderwerp.appendChild(new_text_onderwerp)
+
+        let new_bericht = new_row.insertCell(4);
+        let new_text_bericht = document.createTextNode(item.bericht);
+        new_bericht.appendChild(new_text_bericht)
+      }
+
+
     })
     .catch(console.error);
 }
