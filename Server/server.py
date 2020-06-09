@@ -46,7 +46,6 @@ def report():
 @app.route("/load_reports", methods=['GET'])
 def load_reports():
     retrieve_reports = load_sql("SELECT * FROM `reports`")
-    # print(retrieve_reports)
     if retrieve_reports is not None:
         return jsonify(retrieve_reports), 200, {'ContentType': 'application/json'}
     else:
