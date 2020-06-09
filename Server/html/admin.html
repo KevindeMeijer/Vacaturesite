@@ -7,10 +7,11 @@
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <script src="../js/verbinding.js"></script>
 </head>
 
-<body>
+<body onload="load_reports()">
 	<header>
 	<div class="header">
 		<a href="../html/index.html"><img src="../img/logo/logo_tight.png" alt="Employment Insights" class="logo"></a>
@@ -48,11 +49,11 @@
           <th>Bericht</th>
         </tr>
         <tr>
-          <td>Martyn Wullink</td>
-          <td>0645272890</td>
-          <td>MartynWullink@hotmail.com </td>
-          <td>Probleem</td>
-          <td>Ja jullie zijn dus het probleem.</td>
+          <td id="naam_1"></td>
+          <td id="telefoonnummer_1"></td>
+          <td id="mail_1"></td>
+          <td id="onderwerp_1"></td>
+          <td id="bericht_1"></td>
         </tr>
         <tr>
           <td>Jorick Brandsen</td>
@@ -72,5 +73,5 @@
       </table>
   </div>
 
-</body>
+</body onload="load_reports()">
 </html>
