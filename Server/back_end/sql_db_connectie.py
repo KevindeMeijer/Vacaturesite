@@ -15,8 +15,22 @@ def execute_sql(sql):
         cursor.execute(sql)
         cnx.commit()
     except:
-        return "Error inserting into db"
+        return "Error insert into db"
     finally:
         cnx.close()
     return None
 
+
+def load_sql(question):
+    cnx = mysql.connector.connect(**config)
+    try:
+        cursor = cnx.cursor(dictionary=True)
+        cursor.execute(question)
+        result = cursor.fetchall()
+        return result
+    except:
+        return "Error loading report"
+    finally:
+        cnx.close()
+    return None
+    

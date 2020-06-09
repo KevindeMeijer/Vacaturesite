@@ -7,9 +7,12 @@
 	<link rel="stylesheet" href="../css/admin.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <script src="../js/verbinding.js"></script>
+    <script>window.onload=load_reports</script>
 </head>
 
+<!-- <body onload="..."> is not a nice practice to use, use window.onload instead (see verbinding.js) :) -->
 <body>
 	<header>
 	<div class="header">
@@ -47,30 +50,9 @@
           <th>Onderwerp</th>
           <th>Bericht</th>
         </tr>
-        <tr>
-          <td>Martyn Wullink</td>
-          <td>0645272890</td>
-          <td>MartynWullink@hotmail.com </td>
-          <td>Probleem</td>
-          <td>Ja jullie zijn dus het probleem.</td>
-        </tr>
-        <tr>
-          <td>Jorick Brandsen</td>
-          <td>0651585315</td>
-          <td>JorickBrandsen@armyspy.com</td>
-          <td>Suggestie</td>
-          <td>Ik wil graag suggesteren dat jullie stoppen met bestaan.</td>
-        </tr>
-        <tr>
-          <td>Marie Dijks</td>
-          <td>0672549193</td>
-          <td>MarieDijks@mail.ru </td>
-          <td>Anders...</td>
-          <td>Wat zou de limiet zijn als ik hier
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed tellus ligula. Sed sed vehicula libero, eget imperdiet ligula. Nam in nisl sed dui egestas tincidunt. Ut sed arcu fringilla, eleifend nunc ut, semper nulla. Cras vitae mi in ex maximus faucibus nec convallis dui. Ut varius ligula nisi, pellentesque placerat neque porttitor eu. Phasellus quis aliquam lectus. Etiam id ultricies nulla, at rhoncus metus. Ut ac arcu ac arcu blandit mollis. Pellentesque hendrerit, mi id ornare varius, dolor nisl pretium ex, nec maximus ex mi at nibh. Pellentesque ac mattis dui. Donec eleifend luctus felis, ac commodo lorem euismod eu. </td>
-        </tr>
       </table>
   </div>
 
+  <!-- Never use tag variables on the ending tag! -->
 </body>
 </html>
