@@ -44,8 +44,6 @@ function report() {
     return false;
 }
 
-window.onload   = () => console.log('window.onload works');
-
 function load_reports() {
     let naam_1 = document.getElementById('naam_1');
     let telefoonnummer_1 = document.getElementById('telefoonnummer_1');
