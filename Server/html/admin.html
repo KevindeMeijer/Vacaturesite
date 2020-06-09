@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+  	<meta charset="utf-8">
+  	<title>E.I. | Login </title>
+  	<link rel="stylesheet" href="../css/admin.css">
+  	<link rel="stylesheet" href="../css/style.css">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+      <header>
+          <div class="header">
+              <a href="../html/index.html"><img src="../img/logo/logo_tight.png" alt="Employment Insights" class="logo"></a>
 
-<head>
-	<meta charset="utf-8">
-	<title>E.I. | Home</title>
-	<link rel="stylesheet" href="../css/admin.css">
-	<link rel="stylesheet" href="../css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-</head>
+              <input type="checkbox" id="chk">
+              <label for="chk" class="show-menu-btn">
+                  <i class="fas fa-ellipsis-h"></i>
+              </label>
 
-<body>
-	<header>
-	<div class="header">
-		<a href="../html/index.html"><img src="../img/logo/logo_tight.png" alt="Employment Insights" class="logo"></a>
+              <ul class="menu">
+                  <a href="../html/favourites.html">Favorieten</a>
+                  <a href="../html/dashboard.html">Dashboard</a>
+                  <a href="../html/team.html">Ons Team</a>
+                  <a href="../html/contact.html">Contact</a>
+                  <a href="../html/admin.html">Admin</a>
 
-		<input type="checkbox" id="chk">
-		<label for="chk" class="show-menu-btn">
-			<i class="fas fa-ellipsis-h"></i>
-		</label>
+                  <label for="chk" class="hide-menu-btn">
+                      <i class="fas fa-times"></i>
+                  </label>
 
-		<ul class="menu">
-			<a href="../html/favourites.html">Favorieten</a>
-			<a href="../html/dashboard.html">Dashboard</a>
-			<a href="../html/team.html">Ons Team</a>
-			<a href="../html/contact.html">Contact</a>
-			<a href="../html/admin.html">Admin</a>
+              </ul>
+          </div>
+      </header>
 
-			<label for="chk" class="hide-menu-btn">
-				<i class="fas fa-times"></i>
-			</label>
+      <form class="login-form" action="../html/adminpage.html">
+         <h1>Login</h1>
 
-		</ul>
-	</div>
-	</header>
+         <div class="txtb">
+            <input type="text" pattern="Admin" required>
+            <span data-placeholder="Gebruikersnaam"></span>
+         </div>
 
-  <div class="wrap">
-      <h1 class="section-title">Admin</h1>
-      <div class="border"></div>
+         <div class="txtb">
+            <input type="password" pattern="root" required>
+            <span data-placeholder="Wachtwoord"></span>
+         </div>
 
-      <table id="admintable">
-        <tr>
-          <th>Naam</th>
-          <th>Telefoonnummer</th>
-          <th>E-mailadres</th>
-          <th>Onderwerp</th>
-          <th>Bericht</th>
-        </tr>
-        <tr>
-          <td>Martyn Wullink</td>
-          <td>0645272890</td>
-          <td>MartynWullink@hotmail.com </td>
-          <td>Probleem</td>
-          <td>Ja jullie zijn dus het probleem.</td>
-        </tr>
-        <tr>
-          <td>Jorick Brandsen</td>
-          <td>0651585315</td>
-          <td>JorickBrandsen@armyspy.com</td>
-          <td>Suggestie</td>
-          <td>Ik wil graag suggesteren dat jullie stoppen met bestaan.</td>
-        </tr>
-        <tr>
-          <td>Marie Dijks</td>
-          <td>0672549193</td>
-          <td>MarieDijks@mail.ru </td>
-          <td>Anders...</td>
-          <td>Wat zou de limiet zijn als ik hier
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed tellus ligula. Sed sed vehicula libero, eget imperdiet ligula. Nam in nisl sed dui egestas tincidunt. Ut sed arcu fringilla, eleifend nunc ut, semper nulla. Cras vitae mi in ex maximus faucibus nec convallis dui. Ut varius ligula nisi, pellentesque placerat neque porttitor eu. Phasellus quis aliquam lectus. Etiam id ultricies nulla, at rhoncus metus. Ut ac arcu ac arcu blandit mollis. Pellentesque hendrerit, mi id ornare varius, dolor nisl pretium ex, nec maximus ex mi at nibh. Pellentesque ac mattis dui. Donec eleifend luctus felis, ac commodo lorem euismod eu. </td>
-        </tr>
-      </table>
-  </div>
+         <input type="submit" class="logbtn" value="Login">
 
-</body>
+      </form>
+
+      <script type="text/javascript">
+         $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+         });
+
+         $(".txtb input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+         });
+      </script>
+
+  </body>
 </html>
