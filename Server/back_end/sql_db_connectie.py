@@ -9,10 +9,6 @@ config = {
   'database': 'vacaturesite',
   'raise_on_warnings': True
 }
-connection = pymysql.connect(host = '127.0.0.1',
-                             user = 'Alexander',
-                             password = 'root',
-                             db = 'vacaturesite')
 
 def execute_sql(sql):
     cnx = mysql.connector.connect(**config)
@@ -40,6 +36,11 @@ def load_sql(question):
         cnx.close()
     return None
 
+connection = pymysql.connect(host = '127.0.0.1',
+                             user = 'Alexander',
+                             password = 'root',
+                             db = 'vacaturesite')
+                             
 # Grafieken vullen
 januari = "SELECT `job_title` FROM `vacatures` WHERE `date_added` BETWEEN '2016-01-02' AND '2016-01-03'"
 
