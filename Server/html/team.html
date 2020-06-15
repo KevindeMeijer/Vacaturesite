@@ -6,6 +6,7 @@
     <title>E.I. | Team</title>
     <link rel="stylesheet" href="../css/team.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dark.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
@@ -22,11 +23,20 @@
             </label>
 
             <ul class="menu">
-                <a href="../html/favourites.html">Favorieten</a>
+                <!-- <a href="../html/favourites.html">Favorieten</a> -->
                 <a href="../html/dashboard.html">Dashboard</a>
                 <a href="../html/team.html">Ons Team</a>
                 <a href="../html/contact.html">Contact</a>
                 <a href="../html/admin.html">Admin</a>
+
+                <a>
+       			   <div class="theme-switch-wrapper">
+      					<label class="theme-switch" for="checkbox">
+      				  		<input type="checkbox" id="checkbox"/>
+      				  		<div class="slider round"></div>
+         				</label>
+         			</div>
+      			 </a>
 
                 <label for="chk" class="hide-menu-btn">
                     <i class="fas fa-times"></i>
@@ -71,7 +81,7 @@
         </div>
     </div>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         $('.testimonial-pics img').click(function(){
             $(".testimonial-pics img").removeClass("active");
             $(this).addClass("active");
@@ -79,7 +89,9 @@
             $(".testimonial").removeClass("active");
             $("#"+$(this).attr("alt")).addClass("active");
         });
-    </script>
+    </script> -->
 
 </body>
+<script type="text/javascript" src="../js/team.js"></script>
+<script type="text/javascript" src="../js/dark.js"></script>
 </html>
