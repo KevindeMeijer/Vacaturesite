@@ -55,6 +55,42 @@
     --1160: #FF3D00;
 }
 
+[data-theme="dark"] {
+   /* Black & White */
+   --111: #000000;
+   --000: #FFFFFF;
+   /* Backgrounds & text */
+   --090: #EAECEE;
+   --080: #CACFD3;
+   --070: #ABB2B9;
+   --060: #6B7885;
+   --050: #2C3E50;
+   --040: #283848;
+   --030: #1A2530;
+   --020: #141C24;
+   --010: #0D1318;
+   /* HU RED */
+   --R90: #FDEAEA;
+   --R80: #F9CBCA;
+   --R70: #F5ACAA;
+   --R60: #EE6E6B;
+   --R50: #E6302B;
+   --R40: #CF2B27;
+   --R30: #8A1D1A;
+   --R20: #681613;
+   --R10: #450E0D;
+   /* HU BLUE */
+   --B90: #E6F6FC;
+   --B80: #BFE8F8;
+   --B70: #99D9F3;
+   --B60: #4DBDEA;
+   --B50: #00A1E1;
+   --B40: #0091CB;
+   --B30: #006187;
+   --B20: #004865;
+   --B10: #003044;
+}
+
 /* GENERAL STYLING */
 
 * {
@@ -107,6 +143,7 @@ body {
 .menu {
     float: right;
     line-height: 100px;
+    z-index: 99;
 }
 
 .menu a {
