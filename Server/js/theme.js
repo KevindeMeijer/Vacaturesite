@@ -1,1 +1,0 @@
-//Emptiness since there is no dark mode yet

@@ -2,15 +2,21 @@
     box-sizing: border-box;
 }
 
+label {
+   color: var(--090);
+}
+
 /* Style inputs */
 input[type=text], input[type=tel], input[type=email], select, textarea {
     width: 100%;
     padding: 12px;
     border: 2px solid var(--020);
+    background-color: var(--111);
+    color: var(--090);
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    background-color: var(--111);
+    transition: 0.3s;
 }
 
 input[type=submit] {
@@ -19,6 +25,7 @@ input[type=submit] {
     padding: 12px 20px;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 input[type=submit]:hover {

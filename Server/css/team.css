@@ -35,6 +35,7 @@
 .testimonial-contents {
     max-width: 600px;
     margin: auto;
+    color: var(--090);
 }
 
 .testimonial {
@@ -46,11 +47,11 @@
 }
 
 .testimonial p {
-    color: #0D1318;
+    color: var(--090);
     margin-bottom: 20px;
 }
 
-.testimonial .desc {
+.testimonial .description {
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 15px;
