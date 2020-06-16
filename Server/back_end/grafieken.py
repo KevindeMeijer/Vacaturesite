@@ -1,13 +1,8 @@
-# import pprint
-# import json
 import string
-# import re
 import gensim
 from gensim.parsing.preprocessing import remove_stopwords, STOPWORDS
 import nltk as nltk
 from nltk.tokenize import word_tokenize
-# from nltk.stem import WordNetLemmatizer 
-# from part_of_speech import get_part_of_speech
 from back_end.sql_db_connectie import januari_execute, februari_execute, maart_execute, april_execute, mei_execute, juni_execute, juli_execute, augustus_execute, september_execute, oktober_execute, november_execute, december_execute
 
 remove_punctuations = str.maketrans('', '', string.punctuation)
