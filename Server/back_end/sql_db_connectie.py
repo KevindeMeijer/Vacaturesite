@@ -10,6 +10,7 @@ config = {
   'raise_on_warnings': True
 }
 
+# Data verkrijgen vanaf de front-end
 def execute_sql(sql):
     cnx = mysql.connector.connect(**config)
     try:
@@ -22,7 +23,7 @@ def execute_sql(sql):
         cnx.close()
     return None
 
-
+# Data terugsturen naar de frontend vanuit de db
 def load_sql(question):
     cnx = mysql.connector.connect(**config)
     try:
@@ -36,6 +37,7 @@ def load_sql(question):
         cnx.close()
     return None
 
+# Data verzorgen voor de grafieken
 connection = pymysql.connect(host = '127.0.0.1',
                              user = 'Alexander',
                              password = 'root',
@@ -70,51 +72,52 @@ try:
     with connection.cursor() as cursor:
         cursor.execute(januari)
         januari_execute = cursor.fetchall()
-        print("Januari gelukt")
+        # print("Januari gelukt")
     with connection.cursor() as cursor:
         cursor.execute(februari)
         februari_execute = cursor.fetchall()
-        print("Februari gelukt")
+        # print("Februari gelukt")
     with connection.cursor() as cursor:
         cursor.execute(maart)
         maart_execute = cursor.fetchall()
-        print("Maart gelukt")
+        # print("Maart gelukt")
     with connection.cursor() as cursor:
         cursor.execute(april)
         april_execute = cursor.fetchall()
-        print("April gelukt")
+        # print("April gelukt")
     with connection.cursor() as cursor:
         cursor.execute(mei)
         mei_execute = cursor.fetchall()
-        print("Mei gelukt")
+        # print("Mei gelukt")
     with connection.cursor() as cursor:
         cursor.execute(juni)
         juni_execute = cursor.fetchall()
-        print("Juni gelukt")
+        # print("Juni gelukt")
     with connection.cursor() as cursor:
         cursor.execute(juli)
         juli_execute = cursor.fetchall()
-        print("Juli gelukt")
+        # print("Juli gelukt")
     with connection.cursor() as cursor:
         cursor.execute(augustus)
         augustus_execute = cursor.fetchall()
-        print("Augustus gelukt")
+        # print("Augustus gelukt")
     with connection.cursor() as cursor:
         cursor.execute(september)
         september_execute = cursor.fetchall()
-        print("September gelukt")
+        # print("September gelukt")
     with connection.cursor() as cursor:
         cursor.execute(oktober)
         oktober_execute = cursor.fetchall()
-        print("Oktober gelukt")
+        # print("Oktober gelukt")
     with connection.cursor() as cursor:
         cursor.execute(november)
         november_execute = cursor.fetchall()
-        print("November gelukt")
+        # print("November gelukt")
     with connection.cursor() as cursor:
         cursor.execute(december)
         december_execute = cursor.fetchall()
-        print("December gelukt")
+        # print("December gelukt")
 finally:
+    print("Gelukt")
     connection.close()
     
