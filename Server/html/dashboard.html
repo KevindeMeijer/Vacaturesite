@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <!-- Test link for mockup graphs   -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../js/frontend_graph.js"> </script>
+    <script type="text/javascript" src="../js/backend_graph.js"> </script>
+    <script type="text/javascript" src="../js/po_graph.js"> </script>
+    <script type="text/javascript" src="../js/cloud_graph.js"> </script>
     <script type="text/javascript" src="../js/verbinding.js"></script>
-    <script type="text/javascript" src="../js/frontend_graph.js"></script>
     <script>window.onload=load_chars_backend</script>
 </head>
 
@@ -60,15 +63,15 @@
             </div>
 
             <div class="item item2">
-                
+               <div id="backEndChart" style="width: 100%; height: 100%"></div>
             </div>
 
             <div class="item item3">
-
+               <div id="poChart" style="width: 100%; height: 100%"></div>
             </div>
 
             <div class="item item4">
-
+               <div id="cloudChart" style="width: 100%; height: 100%"></div>
             </div>
          </div>
       </div>
