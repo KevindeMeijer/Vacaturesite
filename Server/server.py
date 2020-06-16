@@ -66,6 +66,7 @@ def load_chars_backend():
 def load_chars_productowner():
     return jsonify(grafieken.jan_productowner, grafieken.feb_productowner, grafieken.mrt_productowner, grafieken.apr_productowner, grafieken.mei_productowner, grafieken.jun_productowner,
     grafieken.jul_productowner, grafieken.aug_productowner, grafieken.sep_productowner, grafieken.okt_productowner, grafieken.nov_productowner, grafieken.dec_productowner), 200, {'ContentType': 'application/json'}
+
 @app.route("/load_chars_cloud_security", methods=['GET'])
 def load_chars_cloud_security():
     return jsonify(grafieken.jan_cloud_security, grafieken.feb_cloud_security, grafieken.mrt_cloud_security, grafieken.apr_cloud_security, grafieken.mei_cloud_security, grafieken.jun_cloud_security,
