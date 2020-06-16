@@ -77,6 +77,8 @@ function load_reports() {
     })
     .catch(console.error);
 }
+
+// Grafieken maken
 resultarray_frontend = []
 function load_chars_frontend() {
     fetch('http://127.0.0.1:5000/load_chars_frontend')
