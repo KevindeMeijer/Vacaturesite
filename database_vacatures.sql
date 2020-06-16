@@ -13,7 +13,7 @@ CREATE TABLE vacatures (
 CREATE TABLE reports (
 		id_contact INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 		naam MEDIUMTEXT NOT NULL,
-		telefoonnummer INTEGER NOT NULL,
+		telefoonnummer VARCHAR(11) NOT NULL,
 		email_adres VARCHAR(100) NOT NULL,
 		onderwerp VARCHAR(50) NOT NULL,
 		bericht TEXT NOT NULL,

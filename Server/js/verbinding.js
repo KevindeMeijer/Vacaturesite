@@ -77,3 +77,35 @@ function load_reports() {
     })
     .catch(console.error);
 }
+resultarray_frontend = []
+function load_chars_frontend() {
+    fetch('http://127.0.0.1:5000/load_chars_frontend')
+    .then(response => response.json())
+    .then(result =>{
+        resultarray_frontend = result
+    })
+}
+resultarray_backend = []
+function load_chars_backend() {
+    fetch('http://127.0.0.1:5000/load_chars_backend')
+    .then(response => response.json())
+    .then(result =>{
+        resultarray_backend = result
+    })
+}
+resultarray_productowner = []
+function load_chars_productowner() {
+    fetch('http://127.0.0.1:5000/load_chars_productowner')
+    .then(response => response.json())
+    .then(result =>{
+        resultarray_productowner = result
+    })
+}
+resultarray_cloud_security = []
+function load_chars_cloud_security() {
+    fetch('http://127.0.0.1:5000/load_chars_cloud_security')
+    .then(response => response.json())
+    .then(result =>{
+        resultarray_cloud_security = result
+    })
+}
